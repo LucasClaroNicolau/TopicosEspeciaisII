@@ -6,11 +6,14 @@
 <meta charset="ISO-8859-1">
 <title>Página Inicial</title>
 </head>
-<body>
-<a href='/TrabalhoTopicosII/addPokemon' /> Adicionar Pokemon <br />
-<a href='/TrabalhoTopicosII/listPokemon' /> Listar Pokemons<br />
-<a href='/TrabalhoTopicosII/addTreinador' /> Adicionar Treinador<br />
-<a href='/TrabalhoTopicosII/listTreinador' /> Listar Treinador<br />
-<a href='/TrabalhoTopicosII/listall'/> Listar Todos<br />
+<body style="text-align: center">
+	<h1 style="text-align: center">Pokémon</h1>
+	
+	<button><a href='/TrabalhoTopicosII/addPokemon' /> Adicionar Pokemon <br /></button>
+	<button><a href='/TrabalhoTopicosII/listPokemon' /> Listar Pokemons<br /></button>
+	<button><a href='/TrabalhoTopicosII/addTreinador' /> Adicionar Treinador<br /></button>
+	<button><a href='/TrabalhoTopicosII/listTreinador' /> Listar Treinador<br /></button>
+	<button><a href='/TrabalhoTopicosII/listtodos'/> Listar Todos<br /></button>
+	</div>
 </body>
 </html>

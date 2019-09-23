@@ -6,7 +6,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
- 
+import javax.servlet.http.HttpSession;
+
 
 @WebServlet(name="addTreinador", urlPatterns = {"/addTreinador"})
 public class ServletTreinador extends HttpServlet{
@@ -15,13 +16,14 @@ public class ServletTreinador extends HttpServlet{
 		
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		Integer nivel = Integer.parseInt(request.getParameter("nivel"));
-		Integer qntInsignia = Integer.parseInt(request.getParameter("qntinsignia"));
-		Boolean mestre = (request.getParameter("mestreginasio")== null) ? false : true;
-		
-		Treinador treinado = new Treinador(request.getParameter("nome"), request.getParameter("cidade"), nivel, mestre, qntInsignia);
-		response.sendRedirect("/TrabalhoTopicosII/listTreinador");
+		HttpSession session = request.getSession();
+		Treinador treinador = new Treinador(request.getParameter("nome"), request.getParameter("cidade"),
+				Integer.parseInt(request.getParameter("nivel")), request.getParameter("mestreginasio") != null && Boolean.getBoolean(request.getParameter("mestreginasio")),
+				Integer.parseInt(request.getParameter("qntinsignia")));
+
+		session.setAttribute(treinador.getNome(), treinador);
+
+		response.sendRedirect("/TrabalhoTopicosII/index");
 	}
 	
 	@Override

@@ -6,13 +6,13 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="text-align: center">
 <h1>Adicionar Pokemon</h1>
 	<form action='addPokemon' method='post'>
 		<b>Nome:</b> 
 		<input name='nome' required><br />
 		<b>CP: </b>
-		<input name='cp' required><br />
+		<input name='cp' type='number' required><br />
 		<b>Ataque: </b>
 		<input type='number' name='ataque' required><br />
 		<b>Defesa: </b>

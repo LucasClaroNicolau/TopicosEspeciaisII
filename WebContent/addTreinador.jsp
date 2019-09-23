@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="text-align: center">
 <h1>Adicionar Treinador</h1>
 	<form action='addTreinador' method='post'>
 		<b>Nome:</b> 

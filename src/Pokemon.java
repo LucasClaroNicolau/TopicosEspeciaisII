@@ -18,7 +18,7 @@ public class Pokemon {
 		this.vida = vida;
 		this.temEvolucao = temEvolucao;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -59,8 +59,8 @@ public class Pokemon {
 		this.vida = vida;
 	}
 	
-	public Boolean getTemEvolucao() {
-		return temEvolucao;
+	public boolean getTemEvolucao() {
+		return temEvolucao != null && temEvolucao;
 	}
 	
 	public void setTemEvolucao(Boolean temEvolucao) {

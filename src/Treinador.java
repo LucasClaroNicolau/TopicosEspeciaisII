@@ -38,8 +38,8 @@ public class Treinador {
 		this.nivel = nivel;
 	}
 	
-	public Boolean getMestreGinasio() {
-		return mestreGinasio;
+	public boolean getMestreGinasio() {
+		return mestreGinasio != null && mestreGinasio;
 	}
 	
 	public void setMestreGinasio(Boolean mestreGinasio) {
